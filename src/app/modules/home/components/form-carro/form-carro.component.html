@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="form">
+        <h1>Cadastrar</h1>
+        <div class="inputBox">
+            <input type="text" [(ngModel)]="carroSelected.marca" id="marca" #inputMarca>
+            <span>Marca</span>
+        </div>
+        <div class="inputBox">
+            <input type="text" [(ngModel)]="carroSelected.placa" id="placa" #inputPlaca>
+            <span>Placa</span>
+        </div>
+        <div class="inputBox">
+            <input type="number" [(ngModel)]="carroSelected.ano" id="ano" #inputAno>
+            <span>Ano</span>
+        </div>
+
+        <div class="radioBox">
+            <div>
+                <input type="radio" id="popular" name="radio" [(ngModel)]="carroSelected.tipo" value="Popular" #inputTipoPop checked>
+                <label for="popular">Popular</label>
+            </div>
+            <div>
+                <input type="radio" id="luxo" name="radio" [(ngModel)]="carroSelected.tipo" value="Luxo" #inputTipoLux>
+                <label for="luxo">Luxo</label>
+            </div>
+            <div>
+                <input type="radio" id="carga" name="radio" [(ngModel)]="carroSelected.tipo" value="Carga" #inputTipoCar>
+                <label for="carga">Carga</label>
+            </div>            
+        </div>
+
+        <button type="submit" (click)="addCarroForm(inputMarca.value, inputPlaca.value, inputAno.value, inputTipoPop.checked ? inputTipoPop.value : inputTipoLux.checked ? inputTipoLux.value : inputTipoCar.value)">Salvar</button>
+
+    </div>
+</div>

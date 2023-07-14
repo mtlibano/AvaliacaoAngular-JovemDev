@@ -1,0 +1,57 @@
+.container table {
+    width: 280px;
+    border-collapse: collapse;
+    line-height: 1.8;
+}
+
+.titulo td {
+    padding: 10px;
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dados td {
+    padding: 10px;
+}
+
+.container table .dados td:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.td-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+    gap: 6px;
+}
+
+button {
+    width: 32px;
+    height: 24px;
+}
+
+.pop {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.lux {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration-line: underline;
+}
+
+.car {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration-line: line-through;
+}
+
+.container {
+    max-height: 260px;
+    overflow-y: auto;
+}
+
+.table-container {
+    overflow-x: auto;
+}

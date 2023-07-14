@@ -1,0 +1,23 @@
+<div class="container">
+    <table>
+        <tr class="titulo">
+            <td>ID</td>
+            <td>Marca</td>
+            <td>Placa</td>
+            <td>Ano</td>
+            <td>Tipo</td>
+            <td></td>
+        </tr>
+        <tr class="dados" *ngFor="let carro of list; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{carro.marca}}</td>
+            <td>{{carro.placa}}</td>
+            <td>{{carro.ano}}</td>
+            <td [ngClass]="{'pop': carro.tipo === 'Popular', 'lux': carro.tipo === 'Luxo', 'car': carro.tipo === 'Carga'}">{{carro.tipo}}</td>
+            <td class="td-btn">
+                <button (click)="selectCarro(i)">Up</button>
+                <button (click)="deleteCarro(i)">Del</button>
+            </td>
+        </tr>
+    </table>
+</div>
